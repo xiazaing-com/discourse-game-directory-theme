@@ -6,6 +6,14 @@
 }
 
 .game-topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.game-directory-page .topic-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.game-directory-page .topic-list thead { display: none; }
+.game-directory-page .topic-list tbody { display: contents; }
+.game-directory-page .topic-list-item { display: flex; min-width: 0; min-height: 150px; flex-direction: column; overflow: hidden; border: 1px solid var(--primary-low); border-radius: var(--game-card-radius); background: var(--secondary); box-shadow: 0 1px 2px rgb(0 0 0 / 5%); }
+.game-directory-page .topic-list-item > td { display: block; width: auto; padding: 8px 12px; border: 0; }
+.game-directory-page .topic-list-item .main-link { order: 0; padding-top: 14px; font-size: 1.05em; font-weight: 600; line-height: 1.35; }
+.game-directory-page .topic-list-item .topic-list-data { color: var(--primary-medium); font-size: .85em; }
+.game-directory-page .topic-list-item .num { margin-top: auto; }
 .game-topic-card { overflow: hidden; min-width: 0; border: 1px solid var(--primary-low); border-radius: var(--game-card-radius); background: var(--secondary); transition: transform .18s ease, box-shadow .18s ease; }
 .game-topic-card:hover, .game-topic-card:focus-within { transform: translateY(-2px); box-shadow: 0 6px 18px rgb(0 0 0 / 10%); }
 .game-topic-card__cover { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--primary-low); }
@@ -37,9 +45,11 @@
 .topic-post a[href*="pan."] { display: inline-flex; min-height: 44px; align-items: center; padding: 0 16px; border-radius: 6px; background: var(--game-accent); color: #fff; text-decoration: none; }
 
 @media (max-width: 700px) {
+  .game-directory-page .topic-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .topic-post video { border-radius: 6px; }
   .topic-post img[alt*="截图"] { width: 100%; }
   .topic-post img[alt*="二维码"] { width: 160px; height: 160px; }
 }
+@media (max-width: 380px) { .game-directory-page .topic-list { grid-template-columns: 1fr; } }
 @media (max-width: 700px) { .game-topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .game-topic-card__body { padding: 10px; } .game-detail__hero { grid-template-columns: 1fr; gap: 16px; } }
 @media (max-width: 380px) { .game-topic-grid { grid-template-columns: 1fr; } }
