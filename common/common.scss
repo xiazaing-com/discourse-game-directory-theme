@@ -24,5 +24,22 @@
 .game-download { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; padding: 16px; border: 1px solid var(--primary-low); border-radius: var(--game-card-radius); }
 .game-download__qr { width: 160px; height: 160px; object-fit: contain; }
 .game-download__link { display: inline-flex; min-height: 44px; align-items: center; padding: 0 16px; border-radius: 6px; background: var(--game-accent); color: #fff; }
+
+/* Detail content fallback: also styles ordinary Discourse uploads and videos. */
+.topic-post article img[alt*="封面"],
+.topic-post article img[alt*="封面图"] { display: block; width: 100%; max-width: 960px; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--game-card-radius); }
+.topic-post article .game-video,
+.topic-post article video { display: block; width: 100%; max-width: 960px; height: auto; border-radius: 8px; background: #111; }
+.topic-post article img[alt*="截图"],
+.topic-post article img[alt*="二维码"] { height: auto; max-width: 100%; }
+.topic-post article img[alt*="截图"] { border-radius: 6px; }
+.topic-post article img[alt*="二维码"] { width: 180px; height: 180px; object-fit: contain; }
+.topic-post article a[href*="pan."] { display: inline-flex; min-height: 44px; align-items: center; padding: 0 16px; border-radius: 6px; background: var(--game-accent); color: #fff; text-decoration: none; }
+
+@media (max-width: 700px) {
+  .topic-post article video { border-radius: 6px; }
+  .topic-post article img[alt*="截图"] { width: 100%; }
+  .topic-post article img[alt*="二维码"] { width: 160px; height: 160px; }
+}
 @media (max-width: 700px) { .game-topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .game-topic-card__body { padding: 10px; } .game-detail__hero { grid-template-columns: 1fr; gap: 16px; } }
 @media (max-width: 380px) { .game-topic-grid { grid-template-columns: 1fr; } }
