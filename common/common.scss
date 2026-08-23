@@ -10,6 +10,7 @@
 .game-directory-page .topic-list thead { display: none; }
 .game-directory-page .topic-list tbody { display: contents; }
 .game-directory-page .topic-list-item { display: flex; min-width: 0; min-height: 150px; flex-direction: column; overflow: hidden; border: 1px solid var(--primary-low); border-radius: var(--game-card-radius); background: var(--secondary); box-shadow: 0 1px 2px rgb(0 0 0 / 5%); }
+.game-directory-page .topic-list-item > .game-topic-card__cover { flex: 0 0 auto; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--primary-low); }
 .game-directory-page .topic-list-item > td { display: block; width: auto; padding: 8px 12px; border: 0; }
 .game-directory-page .topic-list-item .main-link { order: 0; padding-top: 14px; font-size: 1.05em; font-weight: 600; line-height: 1.35; }
 .game-directory-page .topic-list-item .topic-list-data { color: var(--primary-medium); font-size: .85em; }
