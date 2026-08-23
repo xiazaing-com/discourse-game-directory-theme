@@ -1,0 +1,8 @@
+zh_CN:
+  theme_metadata:
+    description: "App Store 风格游戏目录主题组件"
+  theme_settings:
+    game_card_radius: "游戏卡片圆角"
+    game_card_accent: "游戏卡片主色"
+    game_card_free_color: "免费标签颜色"
+    game_card_update_color: "更新标签颜色"
